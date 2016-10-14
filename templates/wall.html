@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Wall</title>
+  <link rel="stylesheet" href="/static/stylesheets/style.css">
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="navbar">
+        <h3>Louis's Wall</h3>
+        <!-- <h5>Welcome{{session['user']}}</h5> -->
+        <a href="/logoff">log off</a>
+      </div>
+      <div id="mainwall">
+        <h4>Post a message</h4>
+        <form class="" action="/wall" method="post">
+          <textarea name="message" rows="8" cols="40"></textarea>
+          <input type="Submit" name="name" value="Post A Message">
+      </form>
+        {% for m in messages %}
+          <p>{{ m['message']}}</p>
+          {% for c in comments %}
+            {% if c['message_id'] == m['id'] %}
+              <p>{{c['comment']}}</p>
+              {% endif %}
+              {% endfor %}
+          <form class="" action="/comment" method="post">
+            <input type="hidden" name="users_id" value="{{message['users_id']}}">
+            <input type="hidden" name="message_id" value="{{message['id']}}">
+            <textarea name="comment" rows="8" cols="40"></textarea>
+            <input type="Submit" name="name" value="Post A Comment">
+          </form>
+        {% endfor %}
+      </div>
+    </div>
+  </body>
+</html>

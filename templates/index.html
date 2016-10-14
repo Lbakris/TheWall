@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>The Wall</title>
+    <link rel="stylesheet" href="/static/stylesheets/style.css">
+  </head>
+  <body>
+    <div id="wrapper">
+      <div id="navbar">
+        <h3>Louis's Wall</h3>
+        <h5>Welcome Guest!</h5>
+        <a href="/logoff">log off</a>
+      </div>
+      <div id="maincontent">
+        <div id="loginbox">
+          <h2>Login</h2>
+          <form class="login" action="/login" method="post">
+          <h5>UserName:</h5>
+          <input type="text" name="name" value="">
+          <h5>Password:</h5>
+          <input type="text" name="name" value="">
+          <p></p>
+          <input type="submit" name="submit" value="Submit">
+          </form>
+        </div>
+        <div id="registerbox">
+          <h2>Registration</h2>
+          <form class="register" action="/registration" method="post">
+          <h5>First Name:</h5>
+          <input type="text" name="first_name" value="">
+          <h5>Last Name:</h5>
+          <input type="text" name="last_name" value="">
+          <h5>Email:</h5>
+          <input type="text" name="email" value="">
+          <h5>Password:</h5>
+          <input type="password" name="password" value="">
+          <h5>Confirm Password:</h5>
+          <input type="password" name="confirmpassword" value="">
+          <p></p>
+          <input type="submit" name="submit" value="Submit">
+          </form>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

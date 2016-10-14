@@ -1,0 +1,36 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+#wrapper{
+  width: 980px;
+  margin: auto;
+  background-color: grey;
+}
+#navbar{
+  width: 980px;
+  display: inline-block;
+  height: 50px;
+  background-color: lightblue;
+}
+#navbar h5,a{
+  margin-left: 40px;
+}
+#navbar *{
+  display: inline-block;
+}
+#maincontent{
+  display: inline-block;
+}
+#maincontent #loginbox,#registerbox{
+  vertical-align: top;
+  display: inline-block;
+  margin: auto;
+}
+#loginbox{
+  border: 2px solid black;
+}
+#mainwall input{
+  height: 50px;
+  width: 150px;
+}
